@@ -17,6 +17,7 @@ import java.util.ArrayList;
 public class DonutCategoryAdapter extends RecyclerView.Adapter<DonutCategoryAdapter.ViewHoder> {
     private LayoutInflater layoutInflater;
     private ArrayList<DonutCategory> arrayList;
+    ISendData listener;
 
     public DonutCategoryAdapter(Context context, ArrayList<DonutCategory> arrayList) {
         this.arrayList = arrayList;
@@ -35,12 +36,13 @@ public class DonutCategoryAdapter extends RecyclerView.Adapter<DonutCategoryAdap
         holder.image_tab.setImageResource(arrayList.get(position).getImage_tab());
         holder.name_tab.setText(arrayList.get(position).getName_tab());
 
-//        holder.layout.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Toast.makeText(v.getContext(), arrayList.get(position).getName_tab(), Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        holder.image_tab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                listener = (ISendData) v.getContext();
+                listener.sendData(position);
+            }
+        });
     }
 
     @Override

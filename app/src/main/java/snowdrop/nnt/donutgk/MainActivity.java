@@ -9,10 +9,10 @@ import android.os.Bundle;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
-    private RecyclerView rcv;
-    private DonutAdapter donutAdapter;
-    private ArrayList<Donut> arrayList;
+public class MainActivity extends AppCompatActivity{
+//    private RecyclerView rcv;
+//    private DonutAdapter donutAdapter;
+//    private ArrayList<Donut> arrayList;
 
     private RecyclerView rcvtab;
     private DonutCategoryAdapter donutCategoryAdapter;
@@ -25,20 +25,20 @@ public class MainActivity extends AppCompatActivity {
         /**
          *list_donut
          */
-        rcv = findViewById(R.id.rcv);
-        arrayList = new ArrayList<>();
-        arrayList.add(new Donut("Bánh Donut đỏ", R.drawable.donut_red));
-        arrayList.add(new Donut("Bánh Donut vàng", R.drawable.donut_yellow));
-        arrayList.add(new Donut("Bánh Donut xanh", R.drawable.green_donut));
-        arrayList.add(new Donut("Bánh Donut tím", R.drawable.tasty_donut));
-        arrayList.add(new Donut("Bánh Donut đỏ", R.drawable.donut_red));
-        arrayList.add(new Donut("Bánh Donut vàng", R.drawable.donut_yellow));
-        arrayList.add(new Donut("Bánh Donut xanh", R.drawable.green_donut));
-        arrayList.add(new Donut("Bánh Donut tím", R.drawable.tasty_donut));
-
-        donutAdapter = new DonutAdapter(this, arrayList);
-        rcv.setAdapter(donutAdapter);
-        rcv.setLayoutManager(new GridLayoutManager(this, 1));
+//        rcv = findViewById(R.id.rcv);
+//        arrayList = new ArrayList<>();
+//        arrayList.add(new Donut("Bánh Donut đỏ", R.drawable.donut_red));
+//        arrayList.add(new Donut("Bánh Donut vàng", R.drawable.donut_yellow));
+//        arrayList.add(new Donut("Bánh Donut xanh", R.drawable.green_donut));
+//        arrayList.add(new Donut("Bánh Donut tím", R.drawable.tasty_donut));
+//        arrayList.add(new Donut("Bánh Donut đỏ", R.drawable.donut_red));
+//        arrayList.add(new Donut("Bánh Donut vàng", R.drawable.donut_yellow));
+//        arrayList.add(new Donut("Bánh Donut xanh", R.drawable.green_donut));
+//        arrayList.add(new Donut("Bánh Donut tím", R.drawable.tasty_donut));
+//
+//        donutAdapter = new DonutAdapter(this, arrayList);
+//        rcv.setAdapter(donutAdapter);
+//        rcv.setLayoutManager(new GridLayoutManager(this, 1));
         /**
          * list_donut_tab
          */
@@ -53,5 +53,6 @@ public class MainActivity extends AppCompatActivity {
         donutCategoryAdapter=new DonutCategoryAdapter(this,arrayList_tab);
         rcvtab.setAdapter(donutCategoryAdapter);
         rcvtab.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
+
     }
 }
